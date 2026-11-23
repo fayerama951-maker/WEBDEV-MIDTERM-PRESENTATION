@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FocusSphere - Study Timer & Tasks</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar">
+    <div class="logo">
+      <div class="logo-stack">
+        <span class="logo-pill p1"></span>
+        <span class="logo-pill p2"></span>
+        <span class="logo-pill p3"></span>
+      </div>
+      FocusSphere
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Study Timer</a></li>
+      <li><a href="gpa.html">GPA Calculator</a></li>
+      <li><a href="timetable.html">Timetable</a></li>
+    </ul>
+  </nav>
+
+  <!-- MAIN CONTAINER -->
+  <main class="container">
+    
+    <!-- Pomodoro Timer Card -->
+    <section class="card">
+      <h2>⏱️ Pomodoro Focus Timer</h2>
+      <p class="subtitle">Focus for 25 minutes, then take a short break!</p>
+      
+      <div id="timer-display" style="font-size: 3.5rem; font-weight: bold; text-align: center; color: #c86d51; margin: 1rem 0;">
+        25:00
+      </div>
+      
+      <div style="display: flex; gap: 0.5rem; justify-content: center;">
+        <button id="start-btn">Start</button>
+        <button id="pause-btn" class="secondary-btn">Pause</button>
+        <button id="reset-btn" class="secondary-btn" style="background-color: #d9cbbd; color: #4a3b32;">Reset</button>
+      </div>
+    </section>
+
+    <!-- Task Manager Form Card -->
+    <section class="card">
+      <h2>📝 Daily Study Tasks</h2>
+      <p class="subtitle">Add your assignments and check them off when done.</p>
+
+      <div style="display: flex; gap: 0.5rem;">
+        <input type="text" id="task-input" placeholder="e.g. Finish JavaScript assignment..." style="flex: 1;">
+        <button id="add-task-btn">Add Task</button>
+      </div>
+
+      <ul id="task-list"></ul>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

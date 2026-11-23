@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FocusSphere - Study Timetable</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  -- NAVIGATION BAR --
+  <nav class="navbar">
+    <div class="logo">
+      <div class="logo-stack">
+        <span class="logo-pill p1"></span>
+        <span class="logo-pill p2"></span>
+        <span class="logo-pill p3"></span>
+      </div>
+      FocusSphere
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Study Timer</a></li>
+      <li><a href="gpa.html">GPA Calculator</a></li>
+      <li><a href="timetable.html" class="active">Timetable</a></li>
+    </ul>
+  </nav>
+
+  <!-- MAIN CONTAINER -->
+  <main class="container">
+    
+    <!-- Timetable Planner Card -->
+    <section class="card">
+      <h2>📅 Custom Study Timetable</h2>
+      <p class="subtitle">Organize your weekly schedule by adding your classes or study blocks.</p>
+
+      <!-- Timetable Entry Form -->
+      <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1rem;">
+        <select id="timetable-day">
+          <option value="Monday">Monday</option>
+          <option value="Tuesday">Tuesday</option>
+          <option value="Wednesday">Wednesday</option>
+          <option value="Thursday">Thursday</option>
+          <option value="Friday">Friday</option>
+          <option value="Saturday">Saturday</option>
+          <option value="Sunday">Sunday</option>
+        </select>
+
+        <input type="text" id="timetable-time" placeholder="Time Slot (e.g. 10:00 AM - 12:00 PM)">
+        <input type="text" id="timetable-subject" placeholder="Subject / Topic (e.g. CS 4711)">
+        
+        <button id="add-timetable-btn">Add to Timetable</button>
+      </div>
+
+      <!-- Timetable Table -->
+      <table>
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Time</th>
+            <th>Subject</th>
+          </tr>
+        </thead>
+        <tbody id="timetable-list">
+          <!-- Dynamically added timetable items go here -->
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

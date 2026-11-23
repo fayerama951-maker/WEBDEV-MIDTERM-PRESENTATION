@@ -1,0 +1,77 @@
+
+        
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FocusSphere - GPA Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar">
+    <div class="logo">
+      <div class="logo-stack">
+        <span class="logo-pill p1"></span>
+        <span class="logo-pill p2"></span>
+        <span class="logo-pill p3"></span>
+      </div>
+      FocusSphere
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Study Timer</a></li>
+      <li><a href="gpa.html" class="active">GPA Calculator</a></li>
+      <li><a href="timetable.html">Timetable</a></li>
+    </ul>
+  </nav>
+
+  <!-- MAIN CONTAINER -->
+  <main class="container">
+    
+    <!-- GPA Calculator Card -->
+    <section class="card">
+      <h2>📊 Semester GPA Calculator</h2>
+      <p class="subtitle">Add your courses, grades, and credits to calculate your GPA.</p>
+
+      <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1rem;">
+        <input type="text" id="course-name" placeholder="Course Name (e.g. CS 4711)">
+        
+        <select id="course-grade">
+          <option value="4.0">A (4.0)</option>
+          <option value="3.5">B+ (3.5)</option>
+          <option value="3.0">B (3.0)</option>
+          <option value="2.5">C+ (2.5)</option>
+          <option value="2.0">C (2.0)</option>
+          <option value="1.0">D (1.0)</option>
+          <option value="0.0">F (0.0)</option>
+        </select>
+
+        <input type="number" id="course-credits" placeholder="Credit Hours (e.g. 3)" min="1" max="6">
+        
+        <button id="add-course-btn">Add Course</button>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Course</th>
+            <th>Grade</th>
+            <th>Credits</th>
+          </tr>
+        </thead>
+        <tbody id="course-list">
+        </tbody>
+      </table>
+
+      <div style="margin-top: 1.5rem; font-size: 1.2rem; font-weight: bold; text-align: right; color: #c86d51;">
+        Calculated GPA: <span id="gpa-val">0.00</span>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
